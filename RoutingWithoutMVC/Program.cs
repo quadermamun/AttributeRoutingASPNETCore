@@ -1,0 +1,20 @@
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllersWithViews();
+
+var app = builder.Build();
+
+//app.MapGet("/", () => "Hello World!");
+
+//app.MapDefaultControllerRoute();
+
+
+//Convention based routing
+//app.MapControllerRoute(
+//    name:"default",
+//    pattern:"{controller=Home}/{action=About}/{id?}"
+//    );
+
+//Attribute based routing
+app.MapControllers();
+
+app.Run();
